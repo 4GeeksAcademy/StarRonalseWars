@@ -1,3 +1,31 @@
 /* 
     General Styles
 */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 50px;
+    margin-right: 65px;
+}
+
+.scroll-container>div {
+    display: inline-block;
+    width: 25%;
+    /* Ajusto el ancho de cada tarjeta para mostrar cuatro tarjetas por fila y no se vea feo */
+}
+
+.video {
+    position: fixed; /* Establece la posición fija para que el video esté fuera del flujo normal del documento */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+/* Estilo para el video */
+.myVideo {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    object-fit: cover; /* Escala el video para que llene el contenedor */
+}
