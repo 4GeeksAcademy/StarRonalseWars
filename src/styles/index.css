@@ -10,22 +10,21 @@
 
 .scroll-container>div {
     display: inline-block;
-    width: 25%;
+    width: 33%;
     /* Ajusto el ancho de cada tarjeta para mostrar cuatro tarjetas por fila y no se vea feo */
 }
 
-.video {
-    position: fixed; /* Establece la posición fija para que el video esté fuera del flujo normal del documento */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa todo el ancho de la ventana */
-    height: 100%; /* Ocupa toda la altura de la ventana */
-    z-index: -1; /* Coloca el video detrás de todo el contenido */
+body {
+    background-image: url('https://img.freepik.com/foto-gratis/panorama-nocturno-galaxia_23-2148895322.jpg?t=st=1716143300~exp=1716146900~hmac=0e520a542e8e4c5dbcc67fbff7a4a6b06b35f3c3335f4d4788bdb36a2832fa0d&w=740');
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina el margen predeterminado del body */
 }
 
-/* Estilo para el video */
-.myVideo {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100%; /* Ocupa toda la altura del contenedor */
-    object-fit: cover; /* Escala el video para que llene el contenedor */
+.star-wars {
+    font-size: 50px;
+    color: #fff;
+    text-shadow: -1px -1px 0 #ff0, 2px -2px 0 #ff0, 5px 5px 0 #ff0;
 }

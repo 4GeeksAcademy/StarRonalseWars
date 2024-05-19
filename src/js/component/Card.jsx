@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
+export const CharacterCard = ({personaje, favoritos, agregarFavorito}) =>{
 
-export const CharacterCard = ({personaje}) =>{
+    const isInFavoritosCharacter = favoritos.some(favorito => favorito.name === personaje.name);
+
     return (
  <div className="contenedoresCard">
-        <div className="card mx-3" >
+        <div className="card bg-danger mx-3" >
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{personaje.name}</h5>
@@ -16,18 +19,27 @@ export const CharacterCard = ({personaje}) =>{
                 <li className="list-group-item overflow-hidden">Eye Color: {personaje.details.properties.eye_color}</li>
             </ul>
             <div className="card-body">
-                <button type="button" className="btn btn-outline-primary">Learn More</button>
-                <button type="button" className="btn btn-outline-warning float-end"><i className="far fa-heart"></i></button>
+            <Link to={`/Character/${personaje.uid}`} className="btn btn-dark">
+                Learn More
+            </Link>
+            <button onClick={() => agregarFavorito(personaje)} className="btn btn-danger">
+                                {isInFavoritosCharacter ? (
+                                    <i className="fas fa-heart"></i>
+                                ) : (
+                                    <i className="far fa-heart"></i>
+                                )}
+                            </button>
             </div>
         </div>
 </div>
     );
 };
 
-export const StarShipCard = ({ship}) =>{
+export const StarShipCard = ({ship, agregarFavorito, favoritos}) =>{
+    const isInFavoritosShips = favoritos.some(favorito => favorito.name === ship.name);
     return (
 <div className="contenedoresCard">
-        <div className="card mx-3" >
+        <div className="card bg-danger mx-3" >
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{ship.name}</h5>
@@ -38,18 +50,29 @@ export const StarShipCard = ({ship}) =>{
                 <li className="list-group-item overflow-hidden">Class : {ship.details.properties.vehicle_class}</li>
             </ul>
             <div className="card-body">
-                <button type="button" className="btn btn-outline-primary">Learn More</button>
-                <button type="button" className="btn btn-outline-warning float-end"><i className="far fa-heart"></i></button>
+            <Link to={`/StarShip/${ship.uid}`} className="btn btn-dark">
+                Learn More
+            </Link>
+            <button onClick={() => agregarFavorito(ship)} className="btn btn-danger">
+                                { isInFavoritosShips? (
+                                    <i className="fas fa-heart"></i>
+                                ) : (
+                                    <i className="far fa-heart"></i>
+                                )}
+            </button>
             </div>
         </div>
 </div>
     )
 };
 
-export const PlanetsCard = ({planet}) => {
+export const PlanetsCard = ({planet, agregarFavorito, favoritos}) => {
+
+const isInFavoritosPlanet = favoritos.some(favorito => favorito.name === planet.name);
+
     return (
-<div className="contenedoresCard">
-        <div className="card mx-3" >
+    <div className="contenedoresCard">
+        <div className="card bg-danger mx-3" >
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{planet.name}</h5>
@@ -60,10 +83,18 @@ export const PlanetsCard = ({planet}) => {
                 <li className="list-group-item overflow-hidden">terrain :{planet.details.properties.terrain} </li>
             </ul>
             <div className="card-body">
-                <button type="button" className="btn btn-outline-primary">Learn More</button>
-                <button type="button" className="btn btn-outline-warning float-end"><i className="far fa-heart"></i></button>
+            <Link to={`/Planets/${planet.uid}`} className="btn btn-dark">
+                Learn More
+            </Link>
+            <button onClick={() => agregarFavorito(planet)} className="btn btn-danger">
+                                    {isInFavoritosPlanet ? (
+                                        <i className="fas fa-heart"></i>
+                                    ) : (
+                                        <i className="far fa-heart"></i>
+                                    )}
+                                </button>
             </div>
         </div>
-</div>
+    </div>
     )
 }
