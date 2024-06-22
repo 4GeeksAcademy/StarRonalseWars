@@ -9,7 +9,7 @@ export const CharacterCard = ({personaje, favoritos, agregarFavorito}) =>{
     return (
  <div className="contenedoresCard">
         <div className="card bg-danger mx-3" >
-            <img src="..." className="card-img-top" alt="..." />
+            <img src="https://blog.camaralia.com/wp-content/uploads/2016/01/Star-Wars-Blu-ray1.jpg" className="imagenes" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{personaje.name}</h5>
             </div>
@@ -40,7 +40,7 @@ export const StarShipCard = ({ship, agregarFavorito, favoritos}) =>{
     return (
 <div className="contenedoresCard">
         <div className="card bg-danger mx-3" >
-            <img src="..." className="card-img-top" alt="..." />
+            <img src="https://blog.camaralia.com/wp-content/uploads/2016/01/Star-Wars-Blu-ray1.jpg" className="imagenes" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{ship.name}</h5>
             </div>
@@ -73,7 +73,7 @@ const isInFavoritosPlanet = favoritos.some(favorito => favorito.name === planet.
     return (
     <div className="contenedoresCard">
         <div className="card bg-danger mx-3" >
-            <img src="..." className="card-img-top" alt="..." />
+            <img src="https://blog.camaralia.com/wp-content/uploads/2016/01/Star-Wars-Blu-ray1.jpg" className="imagenes" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{planet.name}</h5>
             </div>

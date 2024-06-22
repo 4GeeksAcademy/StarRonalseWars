@@ -13,18 +13,94 @@
     width: 33%;
     /* Ajusto el ancho de cada tarjeta para mostrar cuatro tarjetas por fila y no se vea feo */
 }
+@media (max-width: 767px) {
+    .scroll-container {
+        display: inline-block;
+        width: 180%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .scroll-container {
+        display: inline-block;
+        width: 200%;
+    }
+}
 
 body {
     background-image: url('https://img.freepik.com/foto-gratis/panorama-nocturno-galaxia_23-2148895322.jpg?t=st=1716143300~exp=1716146900~hmac=0e520a542e8e4c5dbcc67fbff7a4a6b06b35f3c3335f4d4788bdb36a2832fa0d&w=740');
-    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    background-size: cover !important;
+    background-attachment: fixed !important;
     margin: 0; /* Elimina el margen predeterminado del body */
+    min-height: 100vh !important;
+    position: relative !important;
+    padding-bottom: 3em !important;
+    background-position: center !important;
+    grid-template-rows: auto 1fr auto;
 }
+@media (max-width: 767px) {
+    body {
+        min-height: 100vh;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    body{
+        min-height: 100vh;
+    }
+}
+
 
 .star-wars {
     font-size: 50px;
     color: #fff;
-    text-shadow: -1px -1px 0 #ff0, 2px -2px 0 #ff0, 5px 5px 0 #ff0;
+    text-shadow: -1px -1px 0 #ff0, 2px -2px 0 #ff0, 5px 5px 0 #ff0 !important;
+    text-decoration: none;
+}
+@media (max-width: 767px) {
+    .star-wars {
+        font-size: 20px; 
+        text-shadow: none;
+        text-decoration: none !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .star-wars {
+        font-size: 35px; 
+        text-shadow: none;
+        text-decoration: none !important;
+    }
+}
+
+#cartas{
+    margin-top: 15% !important;
+    background-color: white;
+    margin-bottom: 15px !important;
+    width: 75%; /* Ajuste el ancho al 80% del contenedor padre */
+}
+
+.footer {
+    width: 100% !important;
+    background-color: #575858 !important;
+    color: white !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important; 
+    overflow-wrap: break-word !important;
+
+}
+
+.separadores{
+    border-radius: 10px;
+    background-color: rgb(231, 159, 159);
+    margin: 10px;
+    font-size: 20px;
+    color: black
+}
+
+.imagenes{
+    width: 100%;
+    height: 100%;
 }

@@ -8,7 +8,7 @@ export const Navbar = ({favoritos}) => {
 		<div className="containerNavbar">
 			<nav className="navbar navbar-light  mb-3 fixed-top">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1 star-wars">Star Wars</span>
+					<span className="navbar-brand mb-0  star-wars">Star Wars</span>
 				</Link>
 				<div className="ml-auto">
 					<div className="botonFavoritos btn-group dropstart">

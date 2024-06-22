@@ -22,12 +22,11 @@ export const Character = () => {
     })
 
 return (
-    <div className="container">
-        <div className="container">
+        <div className="container" id='cartas'>
             <div className="card">
                 <div className="">
                     <div className="">
-                        <img src=""  alt="..." />
+                        <img src="https://blog.camaralia.com/wp-content/uploads/2016/01/Star-Wars-Blu-ray1.jpg" className='imagenes'  alt="..." />
                     </div>
                     <div className="">
                         <div className="">
@@ -41,38 +40,29 @@ return (
             </div>
   
             <div className="">
-                <div>
-                    <h5 className="">Detalles del Personaje</h5>
-                </div>
+  
                 {personajeDetalle ? (
                     <div className="">
-                        <div className="">
-                            <p>Nombre</p>
-                            <p>{personajeDetalle.properties.name}</p>
+                        <div className="separadores">
+                            <p>Nombre : {personajeDetalle.properties.name}</p>
                         </div>
-                        <div className="">
-                            <p>Año de nacimiento</p>
-                            <p>{personajeDetalle.properties.birth_year}</p>
+                        <div className="separadores">
+                            <p>Año de nacimiento : {personajeDetalle.properties.birth_year}</p>
                         </div>
-                        <div className="">
-                            <p>Genero</p>
-                            <p>{personajeDetalle.properties.gender}</p>
+                        <div className="separadores">
+                            <p>Genero : {personajeDetalle.properties.gender}</p>
                         </div>
-                        <div className="">
-                            <p>Altura</p>
-                            <p>{personajeDetalle.properties.height}</p>
+                        <div className="separadores">
+                            <p>Altura : {personajeDetalle.properties.height}</p>
                         </div>
-                        <div className="">
-                            <p>Peso</p>
-                            <p>{personajeDetalle.properties.mass}</p>
+                        <div className="separadores">
+                            <p>Peso: {personajeDetalle.properties.mass}</p>
                         </div>
-                        <div className="">
-                            <p>Color de Ojos</p>
-                            <p>{personajeDetalle.properties.eye_color}</p>
+                        <div className="separadores">
+                            <p>Color de Ojos : {personajeDetalle.properties.eye_color}</p>
                         </div>
-                        <div className="">
-                            <p>Color de Cabello</p>
-                            <p>{personajeDetalle.properties.hair_color}</p>
+                        <div className="separadores">
+                            <p>Color de Cabello : {personajeDetalle.properties.hair_color}</p>
                         </div>
                     </div>
                 ) :
@@ -81,10 +71,10 @@ return (
             </div>
             <div className="">
                 <Link to="/">
-                    <button className="btn btn-danger mt-5">Back Home</button>
+                    <button className="btn btn-danger mt-2">Back Home</button>
                 </Link>
             </div>
         </div>
-    </div>
+
 );
 };
